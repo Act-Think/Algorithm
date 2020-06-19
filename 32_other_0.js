@@ -1,3 +1,6 @@
+// 2577
+
+
 const input = require('fs').readFileSync('/dev/stdin').toString().split("\n");
 const multiple = (parseInt(input[0]) * parseInt(input[1]) * parseInt(input[2])).toString().split('').sort()
 
