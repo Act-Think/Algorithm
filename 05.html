@@ -1,0 +1,19 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fs = require('fs');
+        var input = fs.readFileSync('/dev/stdin').toString().split(' ');
+        var a = parseInt(input[0]);
+        var b = parseInt(input[1]);
+        console.log(a + b);
+    </script>
+</body>
+
+</html>

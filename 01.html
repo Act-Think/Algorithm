@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var money = 1260;
+        var result = 0;
+        result += Math.floor(money/500);
+        money %= 500;
+        result += Math.floor(money/100);
+        money %= 100;
+        result += Math.floor(money/50);
+        money %= 50;
+        result += Math.floor(money/10);
+        money %= 10;
+
+        console.log(money);
+        console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fs = require('fs');
+        var input = fs.readFileSync('/dev/stdin').toString().split(' ');
+        var money = 1000 - input;
+        var result = 0;
+        result += Math.floor(money / 500);
+        money %= 500;
+        result += Math.floor(money / 100);
+        money %= 100;
+        result += Math.floor(money / 50);
+        money %= 50;
+        result += Math.floor(money / 10);
+        money %= 10;
+        result += Math.floor(money / 5);
+        money %= 5;
+        result += Math.floor(money / 1);
+        money %= 1;
+        console.log(result);
+    </script>
+</body>
+
+</html>
