@@ -4,6 +4,9 @@
 // var input 대신
 // var [a, b] 로도 가능
 
+a.split(' ').map(Number);
+
+
 var input = require('fs').readFileSync('/dev/stdin', 'utf8').split(' ');
 // 이렇게 하면 ["5", "10"]으로 가져온다.
 var input = require('fs').readFileSync('/dev/stdin').toString().split(' ');

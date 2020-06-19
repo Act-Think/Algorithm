@@ -1,0 +1,4 @@
+function isSelfNumber(n) {
+    n
+
+}
