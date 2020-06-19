@@ -1,3 +1,9 @@
+// var input = require('fs').readFileSync('/dev/stdin').split('\n');
+
+
+
+
+
 // var fs = require('fs');
 // var input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 // var a = parseInt(input[0]);

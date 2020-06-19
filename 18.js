@@ -6,3 +6,5 @@ for (var i = 1; i <= input[0]; i++) {
     input[i].split("");
     console.log("Case #" + i + ": " + (parseInt(input[i][0])+parseInt(input[i][2])));
 }
+
+// `Case #${i}: (parseInt(input[i][0])+parseInt(input[i][2]))`
