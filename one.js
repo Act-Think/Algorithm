@@ -1,4 +1,6 @@
 var a = require('fs').readFileSync('/dev/stdin');
+var a = require('fs').readFileSync('/dev/stdin').toString();
+
 // 숫자 하나일 때는 이렇게 해도 된다.
 // string이면 앞에 + 붙여서 숫자로 만들어준다.
 
