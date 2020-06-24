@@ -4,4 +4,4 @@ console.log(alphabet);
 
 
 
-indexOf(az[i])
+
