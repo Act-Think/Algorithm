@@ -1,7 +1,7 @@
 
 
 
-/ var input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+// var input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
 
 // var fs = require('fs');
