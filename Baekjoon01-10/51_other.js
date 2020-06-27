@@ -9,6 +9,26 @@ console.log(T.length);
 
 // unujee1207
 
+const fs = require('fs');
+const assert = require('assert');
+let input = fs.readFileSync('/dev/stdin').toString();
+assert.ok(input.includes('\n'))
+input = input.trim()
+
+input = input.replace(/c=/g, 'A');
+input = input.replace(/c-/g, 'B');
+input = input.replace(/dz=/g, 'C');
+input = input.replace(/d-/g, 'D');
+input = input.replace(/s=/g, 'E');
+input = input.replace(/z=/g, 'F');
+input = input.replace(/lj/g, 'G');
+input = input.replace(/nj/g, 'H');
+
+console.log(input.length)
+
+// ktseo41
+
+
 const n = require('fs').readFileSync('dev/stdin').toString().trim().split('\n');
 let T = n.shift();
 

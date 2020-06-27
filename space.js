@@ -11,7 +11,7 @@ var input = require('fs').readFileSync('/dev/stdin', 'utf8').split(' ').trim();
 // 이렇게 하면 ["5", "10"]으로 가져온다.
 var input = require('fs').readFileSync('/dev/stdin').toString().split(' ').trim();
 // 이것도 위와 똑같다.
-var input = require('fs').readFileSync('/dev/stdin').toString().split(' ').trim().map(Number).trim();
+var input = require('fs').readFileSync('/dev/stdin').toString().split(' ').map(Number);
 // 이렇게 하면 [5, 10]으로 가져온다.
 
 
