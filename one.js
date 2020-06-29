@@ -1,3 +1,5 @@
+// var input = require('fs').readFileSync('/dev/stdin').toString();
+
 var a = require('fs').readFileSync('/dev/stdin');
 var a = require('fs').readFileSync('/dev/stdin').toString().trim();
 

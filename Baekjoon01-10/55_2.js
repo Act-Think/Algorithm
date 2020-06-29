@@ -20,9 +20,13 @@ N(1 ≤ N ≤ 1,000,000,000)이
 */
 
 // var input = require('fs').readFileSync('/dev/stdin').toString();
-var input = "38";
+var input = "13";
 var n = parseInt(input);
-var q = Math.floor((n-2)/6);
-var th = Math.sqrt(2*q+9/4)+1/2;
-var answer = Math.ceil(th);
-console.log(answer);
+
+var count = 1;
+var sum = 1;
+while (n > sum) {
+    sum += count*6; // 1+6=7, 7+12=19
+    count++; // 2, 3
+}
+console.log(count);
