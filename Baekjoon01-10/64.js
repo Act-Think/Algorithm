@@ -31,10 +31,3 @@ function minMax (min, max) {
 }
 
 minMax(m, n);
-
-
-
-
-
-
-
