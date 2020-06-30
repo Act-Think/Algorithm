@@ -6,26 +6,21 @@ var n = parseInt(inputN[0]);
 var ex = inputN[1].split(' ');
 var exNum = ex.map(x => parseInt(x));
 
-var set = new Set();
-set.add(1);
-function notPrime (num) {
-    for (i=2; i<=num/2; i++) {
-        for (j=2; j<=num/2; j++) {
-            if (i*j <=num) set.add(i*j);
-        }
+function Prime (num) {
+    if (num == 1) return false;
+    for (i=2; i<=Math.sqrt(num); i++) {
+        if(num%i == 0) return false;
     }
-    return set;
+    return true;
 }
 
-
 function solution (arr) {
-    var max = Math.max(...arr);
-    var notPrimeEx = notPrime(max);
     var count = 0;
     arr.forEach(element => {
-        if(!set.has(element)) count++;
+        if(Prime(element)) count++;
     });
     return count;
 }
 
 console.log(solution(exNum));
+
