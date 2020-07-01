@@ -11,19 +11,15 @@
 // var fs = require('fs');
 // var input = fs.readFileSync('/dev/stdin').toString().trim();
 
-var input = "55-50+40";
-var inputArr = [...input];
-var hasMinus = false
-for (var i = 1; i < inputArr.length; i++) {
-    if (inputArr[i] == "-") {
-        inputArr[i] = `)-(`
-        hasMinus = true;
+var input = "012+0345-0678+0910-0123+0234-0567";
+
+var inputR = input.replace(/0(?=\d)/g, '');
+var inputArr = inputR.split("-");
+
+var sum = eval(inputArr[0]);
+if (inputArr.length >= 2) {
+    for (var i = 1; i < inputArr.length; i++) {
+        sum -= eval(inputArr[i]);
     }
 }
-var inputArrJoin = inputArr.join('');
-
-if (hasMinus) inputArrJoin = `(${inputArrJoin})`;
-
-var answer = eval(inputArrJoin);
-
-console.log(answer);
+console.log(sum);

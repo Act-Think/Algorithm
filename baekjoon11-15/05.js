@@ -14,9 +14,24 @@ var input = "11\n1 4\n3 5\n0 6\n5 7\n3 8\n5 9\n6 10\n8 11\n8 12\n2 13\n12 14"
 var inputSplit = input.split('\n');
 var n = parseInt(inputSplit[0]);
 
-var arr=[];
-for (var i=1; i<=n; i++) {
-    var [start, end] = input[i].split(' ');
+var arr = [];
+for (var i = 1; i <= n; i++) {
+    var [start, end] = inputSplit[i].split(' ');
     arr.push([+start, +end]);
 }
-console.log(arr);
+
+arr.sort((a, b) => {
+    if (a[1] === b[1]) return a[0] - b[0];
+    return a[1] - b[1];
+})
+
+var count = 0;
+var time = 0;
+arr.forEach(element => {
+    if (element[0] >= time) {
+        count += 1;
+        time = element[1];
+    }
+}
+);
+console.log(count); 

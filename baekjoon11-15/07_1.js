@@ -7,23 +7,19 @@
 수는 0으로 시작할 수 있다.
 */
 
-'use strict'
+
 // var fs = require('fs');
 // var input = fs.readFileSync('/dev/stdin').toString().trim();
 
-var input = "55-50+40";
-var inputArr = [...input];
-var hasMinus = false
-for (var i = 1; i < inputArr.length; i++) {
-    if (inputArr[i] == "-") {
-        inputArr[i] = `)-(`
-        hasMinus = true;
+var input = "12345-10+20-30+40-50";
+var inputArr = input.split("-");
+
+var sum = inputArr[0];
+if (inputArr.length >= 2) {
+    for (var i = 1; i < inputArr.length; i++) {
+        sum -= eval(inputArr[i]*1);
     }
 }
-var inputArrJoin = inputArr.join('');
+console.log(sum);
 
-if (hasMinus) inputArrJoin = `(${inputArrJoin})`;
-
-var answer = eval(inputArrJoin);
-
-console.log(answer);
+console.log(parseInt("010"));
