@@ -1,19 +1,45 @@
 // 멀쩡한 사각형
 
 /*
-수평 직선에 탑 N대
-발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신
-한 번 수신된 신호는 다른 탑으로 송신되지 않는다.
+가로 W (1억 이하의 자연수)
+세로 H (1억 이하의 자연수)
+1*1 격자칸
 
-heights: 맨 왼쪽부터 순서대로 탑의 높이를 담은 배열 
- - 길이 2 이상 100 이하인 정수 배열
- - 모든 탑의 높이는 1 이상 100 이하
-return: 각 탑이 쏜 신호를 어느 탑에서 받았는지 기록한 배열
+대각선 꼭지점 2개를 잇는 방향으로 잘라 놓았습니다.
+→ 현재 직사각형 종이는 크기가 같은 직각삼각형 2개로 나누어진 상태
+
+return: 사용할 수 있는 정사각형의 개수
 */
 'use strict'
 
 function solution(w, h) {
-
+    var answer = w * h - (w + h - gcd(w, h));
+    return answer;
 }
 
-console.log(solution(8,12);
+console.log(solution(8, 12));
+
+
+function gcd(a, b) { return b ? gcd(b, a % b) : Math.abs(a); }
+function lcm(a, b) { return (a * b) / gcd(a, b); }
+function gcdlcm(a, b) {
+    return [gcd(a, b), lcm(a, b)];
+}
+
+function gcdlcm(a, b) {
+    var r;
+    for (var ab = a * b; r = a % b; a = b, b = r) { }
+    return [b, ab / b];
+}
+
+function gcdlcm(a, b) {
+    var gcd = calc_gcd(a, b);
+    var lcm = (a * b) / gcd;
+
+    return [gcd, lcm];
+}
+
+function calc_gcd(a, b) {
+    if (b == 0) return a;
+    return a > b ? calc_gcd(b, a % b) : calc_gcd(a, b % a);
+}
